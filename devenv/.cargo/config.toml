@@ -1,9 +1,6 @@
 [target.x86_64-unknown-linux-gnu]
 linker = "clang"
-rustflags = [
-  "-Clink-arg=-fuse-ld=mold",
-  "-Zcodegen-backend=cranelift",
-]
+rustflags = ["-Clink-arg=-fuse-ld=mold", "-Zcodegen-backend=cranelift"]
 
 [build]
 rustc-wrapper = "sccache"
