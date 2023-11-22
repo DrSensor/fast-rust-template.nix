@@ -7,6 +7,7 @@ rustflags = [
 
 [build]
 rustc-wrapper = "sccache"
+rustflags = ["-Zthreads=8"]
 
 [unstable]
 codegen-backend = true
