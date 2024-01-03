@@ -6,6 +6,14 @@ rustflags = [
   "-Zthreads=8",
 ]
 
+[target.aarch64-unknown-linux-gnu]
+linker = "clang"
+rustflags = [
+  "-Clink-arg=-fuse-ld=mold",
+  "-Zcodegen-backend=cranelift",
+  "-Zthreads=8",
+]
+
 [build]
 rustc-wrapper = "sccache"
 rustflags = ["-Zthreads=8"]
